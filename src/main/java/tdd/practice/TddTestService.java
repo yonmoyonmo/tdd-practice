@@ -11,7 +11,7 @@ public class TddTestService {
 
     private final UserNameRepository userNameRepository;
 
-    TddTestService(UserNameRepository userNameRepository){
+    public TddTestService(UserNameRepository userNameRepository){
         this.userNameRepository = userNameRepository;
     }
 
@@ -65,7 +65,10 @@ public class TddTestService {
     public void updateName(UserName selectedUserName) {
         Optional<UserName> target = userNameRepository.findById(selectedUserName.getId());
         target.ifPresent(userName -> {
-            UserName result = userNameRepository.save(userName);
+            System.out.println(userName.getUserName());
+            System.out.println(selectedUserName.getUserName());
+            selectedUserName.setCreatedTime(userName.getCreatedTime());
+            UserName result = userNameRepository.save(selectedUserName);
         });
     }
 

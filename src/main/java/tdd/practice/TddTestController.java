@@ -16,7 +16,7 @@ public class TddTestController {
 
     private final TddTestService tddTestService;
 
-    TddTestController(TddTestService tddTestService){
+    public TddTestController(TddTestService tddTestService){
         this.tddTestService = tddTestService;
     }
 

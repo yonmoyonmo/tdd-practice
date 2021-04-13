@@ -1,8 +1,6 @@
 package tdd.practice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -10,6 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 public class UserName {
 
     @Id
@@ -22,6 +21,8 @@ public class UserName {
     @CreationTimestamp
     private LocalDateTime createdTime;
 
+    public UserName(){
+    }
     public UserName(String name) {
         this.userName = name;
     }
