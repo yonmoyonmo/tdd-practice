@@ -25,17 +25,4 @@ class TddTestControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    void create() {
-    }
-
-    void delete() {
-
-    }
-    void list(){
-
-    }
-    void update(){
-
-    }
 }
